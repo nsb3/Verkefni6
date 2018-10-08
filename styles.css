@@ -50,6 +50,17 @@ h1 {
     */
 }
 
+
+#mynd{
+    order: 2;
+}
+#texti{
+    order: 1;
+}
+.grid__row{
+    display: flex;
+    flex-direction: column;
+}
 .grid__col {
     width: 100%;
 }
@@ -72,8 +83,15 @@ h1 {
 
 /* TODO setja upp grid fyrir >= 1000px */
 @media(min-width: 1000px) {
+    #mynd{
+        order: 1;
+    }
+    #texti{
+        order: 2;
+    }
     .grid__row {
         display: flex;
+        flex-direction: row;
         margin-left: -10px;
         margin-right: -10px;
         margin-bottom: 40px;
@@ -85,7 +103,29 @@ h1 {
         padding-left: 10px;
     }
 
-    .card__row{
+    .card__row {
+        display: flex;
+        flex-wrap: wrap;
+        /*   flex-direction: column;*/
+        margin-left: -10px;
+        margin-right: -10px;
+        margin-bottom: 40px;
+    }
+
+    .card__col {
+        width: 33.333%;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}
+
+/* TODO koma mynd fyrir á öðrum stað í < 1000px */
+@media(min-width: 700px) and (max-width: 1000px) {
+    .cards{
+        margin-bottom: 40px;
+    }
+
+    .card__row {
         display: flex;
         flex-wrap: wrap;
         /*   flex-direction: column;*/
@@ -95,29 +135,6 @@ h1 {
     }
 
     .card__col{
-        width: 33.333%;
-        padding-right: 10px;
-        padding-left: 10px;
-    }
-}
-
-
-/* TODO koma mynd fyrir á öðrum stað í < 1000px */
-@media(min-width: 700px) and (max-width: 1000px) {
-    .cards-700 {
-        margin-bottom: 40px;
-    }
-
-    .card__row-700 {
-        display: flex;
-        flex-wrap: wrap;
-        /*   flex-direction: column;*/
-        margin-left: -10px;
-        margin-right: -10px;
-        margin-bottom: 40px;
-    }
-
-    .card__col-700 {
         width: 50%;
         padding-right: 10px;
         padding-left: 10px;
