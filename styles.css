@@ -50,13 +50,17 @@ h1 {
     */
 }
 
-
+/*
 #mynd{
     order: 2;
 }
 #texti{
     order: 1;
+}*/
+.grid:first-of-type .grid__row:nth-of-type(2) .grid__col:first-of-type{
+    order: 1;
 }
+
 .grid__row{
     display: flex;
     flex-direction: column;
@@ -83,11 +87,15 @@ h1 {
 
 /* TODO setja upp grid fyrir >= 1000px */
 @media(min-width: 1000px) {
+   /*
     #mynd{
         order: 1;
     }
     #texti{
         order: 2;
+    }*/
+    .grid:first-of-type .grid__row:nth-of-type(2) .grid__col:first-of-type{
+        order: 0;
     }
     .grid__row {
         display: flex;
